@@ -12,9 +12,9 @@ def mergeSort(Slist):
         mergeSort(right)
 
         i, j, k = 0, 0, 0
+        comparing_time = comparing_time + 1
         while i < len(left) and j < len(right):
-            comparing_time = comparing_time + 1
-            if left[i].name < right[j].name:
+            if left[i].number < right[j].number:
                 Slist[k] = left[i]
                 i = i + 1
             else:

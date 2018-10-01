@@ -10,7 +10,7 @@ def bubbleSort(Slist):
     for i in range(len(Slist)-1, 0, -1):
         comparing_time = comparing_time + 1
         for j in range(i):
-            if Slist[j].number > Slist[j+1].number:
+            if Slist[j].power > Slist[j+1].power:
                 temp = Slist[j]
                 Slist[j] = Slist[j+1]
                 Slist[j+1] = temp
@@ -30,7 +30,7 @@ if __name__ == "__main__":
     file = open('Stadium_List')
     for line in file:
         values = line.split(',')
-        stadium = Stadium(str(values[number_of_viewers]), values[name], str(values[power_of_ligthing][:-1]))
+        stadium = Stadium(int(values[number_of_viewers]), values[name], int(values[power_of_ligthing][:-1]))
         Slist.append(stadium)
     for item in Slist:
         print(item)
