@@ -6,15 +6,12 @@ def read_file():
     for line in open("Wchain.in.txt"):
         stripped = line.strip("\n")
         words.append(stripped)
-        # print(words)
     print("Got " + str(words.pop(0)) + " words in")
-    words.sort()
-    for i in words:
-        print(str(i.strip("\n")) + ", ")
-        print("-----------------------------------")
+    print(words)
+    print("-------------------------------------------------")
 
 
-def math(words):
+def possible_word(words):
     for i in words:
         if i == string:
             words.remove(i)
@@ -26,12 +23,12 @@ def math(words):
             words_result.append(k)
     total_result = open("wchain_out.txt", 'w')
     total_result.write(str(words_count))
-    # print(words_result)
-    print(words_count)
+    print("Count words: " + str(words_count))
+    print("-------------------------------------------------")
+    print(words_result)
 
 
 if __name__ == "__main__":
     read_file()
-    print("Enter main world: ")
-    string = input()
-    math(words)
+    string = words[0]
+    possible_word(words)
