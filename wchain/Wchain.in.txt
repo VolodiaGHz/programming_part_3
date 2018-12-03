@@ -1,11 +1,1 @@
-10
-crates
-car
-cats
-crate
-rate
-at
-ate
-tea
-rat
-a
+3
